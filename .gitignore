@@ -1,2 +1,4 @@
-node_modules
-frontend/content/css
+node_modules/
+css/
+bower_components/
+build/
