@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/davidtadams/Scratch#readme",
   "dependencies": {
+
+  },
+  "devDependencies": {
     "gulp": "^3.9.1"
   }
 }
