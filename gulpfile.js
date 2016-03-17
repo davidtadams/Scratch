@@ -1,12 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var mainBowerFiles = require('main-bower-files')
-
-// var bowerJSPaths = [
-//   'bower_components/angular/angular.js',
-//   'bower_components/angular-ui-router/release/angular-ui-router.js',
-//   'bower_components/interact/dist/interact.js'
-// ]
+var connect = require('gulp-connect')
 
 var sassPaths = [
 
@@ -29,11 +24,18 @@ gulp.task('bower-dev', function() {
     .pipe(gulp.dest('frontend/scripts'))
 })
 
+gulp.task('connect', function() {
+  connect.server({
+    root: 'frontend',
+    livereload: true
+  })
+})
+
 gulp.task('watch', function() {
   gulp.watch(['frontend/content/scss/*.scss'], ['sass-dev'])
 })
 
-gulp.task('dev', ['sass-dev', 'bower-dev', 'watch'])
+gulp.task('dev', ['bower-dev', 'watch', 'connect'])
 
 /* ----------------------------------------------------------------------------
   all gulp build tasks for production
