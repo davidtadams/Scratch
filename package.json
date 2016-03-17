@@ -16,10 +16,10 @@
     "url": "https://github.com/davidtadams/Scratch/issues"
   },
   "homepage": "https://github.com/davidtadams/Scratch#readme",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
+    "main-bower-files": "^2.11.1"
   }
 }
